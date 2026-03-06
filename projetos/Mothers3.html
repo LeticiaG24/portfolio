@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mothers3</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/projectDetail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <main id="visao-geral"></main>
+    <div class="colunas">
+        <div class="sobre">
+            <section id="overview">
+                <h2>Project Overview & Goal</h2>
+                <p>O Sistema de Cadastro dos Encontros das Mães que Oram pelos Filhos é uma ferramenta desenvolvida para facilitar a organização, o registro e o acompanhamento das atividades do movimento. Com uma interface simples e intuitiva, o software permite cadastrar encontros, participantes, intenções de oração e grupos locais, garantindo mais agilidade e precisão na gestão das informações. Seu objetivo é apoiar a missão do movimento, oferecendo recursos que fortalecem a comunicação, a unidade e a continuidade das ações pastorais.</p>
+            </section>
+            <section id="architecture">
+                <h2>The Fullstack Architecture</h2>
+                <h3>Front-end</h3>
+                <ul>
+                    <li>Desenvolvido com JavaFX para construção da interface gráfica</li>
+                    <li>Estilização das telas utilizando CSS</li>
+                    <li>Prototipagem das telas no Figma</li>
+                </ul>
+                <h3>Back-end</h3>
+                <ul>
+                    <li>Desenvolvido em Java</li>
+                    <li>Estruturação do projeto utilizando Maven</li>
+                    <li>Geração de relatórios em PDF utilizando a biblioteca iText</li>
+                </ul>
+                <h3>Banco de dados</h3>
+                <ul>
+                    <li>Criação do banco de dados utilizando MySQL</li>
+                    <li>Modelagem do banco de dados conceitual e lógico com BrModelo</li>
+                </ul>
+            </section>
+            <section id="role">
+                <h2>My Role & Core Contributions</h2>
+                <p>Fui responsável por todo o desenvolvimento do back-end do sistema, atuando desde a criação da base do projeto até as funcionalidades finais. Minhas principais contribuições incluem:</p>
+                <ul>
+                    <li>Criação e configuração do projeto Maven</li>
+                    <li>Modelagem e implementação do banco de dados MySQL</li>
+                    <li>Desenvolvimento da lógica de negócio e filtragem de dados</li>
+                    <li>Conexão das tabelas JavaFX com o banco de dados</li>
+                    <li>Implementação do sistema de cadastro de mães e encontros</li>
+                    <li>Funcionalidade de edição de encontros</li>
+                    <li>Geração de relatórios em .txt</li>
+                    <li>Criação da documentação técnica, incluindo modelo conceitual, lógico e diagrama de classes</li>
+                </ul>
+            </section>
+            <section id="challenges">
+                <h2>Challenges & Learnings</h2>
+                <p>Um dos principais desafios do projeto foi a interpretação dos requisitos do cliente e a tradução dessas demandas para regras de negócio e estrutura de dados. <br>Além disso, este foi meu primeiro contato com a criação de um banco de dados relacional, utilizando MySQL, o que exigiu aprendizado rápido sobre modelagem, relacionamentos e integridade referencial. <br>Outro grande desafio foi estar totalmente responsável pelo back-end do sistema, aliando isso a um prazo curto para entrega da atividade, o que demandou organização, priorização de funcionalidades e tomada de decisões técnicas eficientes.</p>
+            </section>
+        </div>
+        <aside>
+            <div class="linha"></div>
+            <nav>
+                <h3>Index</h3>
+                <a href="#overview">Project Overview & Goal</a>
+                <a href="#architecture">The Fullstack Architecture</a>
+                <a href="#role">My Role & Core Contributions</a>
+                <a href="#challenges">Challenges & Learnings</a>
+            </nav>
+        </aside>
+    </div>
+    <section id="contactmeSection"></section>
+    <footer id="footer"></footer>
+    <script src="/js/Footer.js"></script>
+    <script src="/js/Tecnologia.js"></script>
+    <script src="/js/Contato.js"></script>
+    <script src="/js/NavAnimation.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const footerManager = new FooterManager();
+            const techManager = new TechManager();
+            techManager.renderDetalhesProjeto("Mothers3");
+        });
+    </script>
+</body>
+</html>

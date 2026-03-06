@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/projectList.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>My projects</title>
+</head>
+<body>
+    <aside>
+        <a href="/index.html">
+            <button class="home"><span class="material-icons">home_filled</span></button>
+        </a>
+        <h1>Filter Projects</h1>
+        <div class="filtros">
+          <button id="btn-all" class="active">
+            <i class="fa-solid fa-list"></i>
+            <p>All</p>
+            <p id="num-all" class="numero"></p>
+          </button>
+          <button id="btn-web">
+            <i class="fa-solid fa-globe"></i>
+            <p>Web</p>
+            <p id="num-web" class="numero"></p>
+          </button>
+          <button id="btn-desktop">
+            <i class="fa-solid fa-laptop"></i>
+            <p>Desktop</p>
+            <p id="num-desktop" class="numero"></p>
+          </button>
+          <button id="btn-mobile">
+            <i class="fa-solid fa-mobile-screen"></i>
+            <p>Mobile</p>
+            <p id="num-mobile" class="numero"></p>
+          </button>
+        </div>
+        <div class="contact-div">
+          <h1 class="h1-contact">Contact me!</h1>
+          <button class="connect" onclick="abrirModal()">Let's connect<i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+    </aside>
+    <div id="modalOverlay" class="modal-overlay" onclick="fecharModal()">
+  
+  <div id="contatoModal" class="contato-modal" onclick="event.stopPropagation()">
+    <div class="close-modal">
+      <button onclick="fecharModal()">&times;</button>
+      <h2>Let's Connect!</h2>
+    </div>
+
+    <div id="divEmail" class="div-email">
+      <h3><i class="fa-regular fa-envelope"></i> Email</h3>
+      <p>leticia.furtado2406@gmail.com</p>
+    </div>
+
+    <div class="redes-links">
+      <a href="https://www.linkedin.com/in/leticia-furtado-053b6033a/">
+        <i class="fa-brands fa-linkedin"></i>
+      </a>
+      <a href="https://github.com/LeticiaG24">
+        <i class="fa-brands fa-github"></i>
+      </a>
+    </div>
+  </div>
+
+</div>
+
+    <main>
+        <h1>Explore</h1>
+        <div id="projetoContainer" class="projetos">
+
+        </div>
+    </main>
+    <script src="/js/Tecnologia.js"></script>
+    <script src="/js/Contato.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const techManager = new TechManager();
+
+            document.getElementById('btn-all').addEventListener('click', () => {
+              techManager.renderizarProjetos(techManager.projetos);
+              techManager.renderizarTecnologiasDosProjetos(techManager.projetos);
+            });
+
+            document.getElementById('btn-web').addEventListener('click', () => {
+              techManager.renderizarProjetos(techManager.projetosWeb);
+              techManager.renderizarTecnologiasDosProjetos(techManager.projetosWeb);
+            });
+            
+            document.getElementById('btn-desktop').addEventListener('click', () => {
+              techManager.renderizarProjetos(techManager.projetosDesktop);
+              techManager.renderizarTecnologiasDosProjetos(techManager.projetosDesktop);
+            })
+
+            document.getElementById('btn-mobile').addEventListener('click', () => {
+              techManager.renderizarProjetos(techManager.projetosMobile);
+              techManager.renderizarTecnologiasDosProjetos(techManager.projetosMobile);
+            });
+
+            const numAll = document.getElementById("num-all");
+            numAll.textContent = techManager.projetos.length;
+
+            const numWeb = document.getElementById("num-web");
+            numWeb.textContent = techManager.projetosWeb.length;
+
+            const numDesktop = document.getElementById("num-desktop");
+            numDesktop.textContent = techManager.projetosDesktop.length;
+
+            const numMobile = document.getElementById("num-mobile");
+            numMobile.textContent = techManager.projetosMobile.length;
+        });
+    </script>
+    <script>
+      const buttons = document.querySelectorAll(".filtros > button");
+
+      buttons.forEach(button => {
+        button.addEventListener("click", () => {
+          buttons.forEach(btn => btn.classList.remove("active"));
+
+          button.classList.add("active");
+        });
+      });
+    </script>
+</body>
+</html>

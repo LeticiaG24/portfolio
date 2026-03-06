@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mothers3</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/projectDetail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <main id="visao-geral"></main>
+    <div class="colunas">
+        <div class="sobre">
+            <section id="overview">
+                <h2>Project Overview & Goal</h2>
+            </section>
+            <section id="architecture">
+                <h2>The Fullstack Architecture</h2>
+            </section>
+            <section id="role">
+                <h2>My Role & Core Contributions</h2>
+            </section>
+            <section id="challenges">
+                <h2>Challenges & Learnings</h2>
+            </section>
+        </div>
+        <aside>
+            <div class="linha"></div>
+            <nav>
+                <h3>Index</h3>
+                <a href="#overview">Project Overview & Goal</a>
+                <a href="#architecture">The Fullstack Architecture</a>
+                <a href="#role">My Role & Core Contributions</a>
+                <a href="#challenges">Challenges & Learnings</a>
+            </nav>
+        </aside>
+    </div>
+    <section id="contactmeSection"></section>
+    <footer id="footer"></footer>
+    <script src="/js/Footer.js"></script>
+    <script src="/js/Tecnologia.js"></script>
+    <script src="/js/Contato.js"></script>
+    <script src="/js/NavAnimation.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const footerManager = new FooterManager();
+            const techManager = new TechManager();
+            techManager.renderDetalhesProjeto("Mothers3"); //altere o nome do projeto
+        });
+    </script>
+</body>
+</html>

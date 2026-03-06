@@ -1,0 +1,168 @@
+body {
+    display: grid;
+    grid-template-columns: 300px auto;
+    height: 100vh;
+}
+aside {
+    grid-column: 1/2;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 20px 10px 20px;
+    height: 100vh;
+    background: linear-gradient(to bottom, transparent, transparent, transparent, rgba(255, 255, 255, 0.1));
+}
+aside > h1 {
+    margin-top: 10px;
+}
+.filtros {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    margin-top: 10px;
+}
+.filtros > button {
+    width: 100%;
+    display: flex;
+    background-color: transparent;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    gap: 5px;
+    font-size: 1rem;
+}
+.filtros > button.active {
+    background-color: rgba(217, 217, 217, 0.17);
+}
+.filtros i {
+    width: 30px;
+}
+.numero {
+    margin-left: auto;
+    width: 30px;
+}
+.home {
+    color: white;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin: 5px 0 0;
+}
+.home .material-icons {
+    font-size: clamp(1.5rem, 2vw, 1.8rem);
+}
+.projeto-card {
+    min-width: 260px;
+    background-color: rgb(43, 43, 43);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+.info {
+    padding: 15px;
+}
+.gradiente > img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 7rem;
+    border-radius: 15px 15px 0 0;
+}
+.gradiente {
+    position: relative;
+    width: 100%;
+}
+.gradiente::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(43, 43, 43, 0.0) 0%,
+        rgba(43, 43, 43, 0.7) 60%,
+        rgba(43, 43, 43, 1) 100%
+    );
+}
+.projeto-card h2 {
+    padding: 0 0 8px;
+    font-size: clamp(1.5rem, 3vw, 1.8rem);
+}
+.info > p {
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
+    padding-top: 10px;
+}
+.projeto-card a {
+    display: none;
+}
+.projeto-card:hover {
+    transform: translateY(-4px);
+    box-shadow:
+        0 14px 30px rgba(0, 0, 0, 0.45),
+        inset 0 1px 1px rgba(255, 255, 255, 0.12);
+}
+main {
+    grid-column: 2/3;
+    padding: 20px;
+    overflow-y: auto;
+}
+h1 {
+    font-size: 1.5rem;
+    padding-bottom: 2%;
+    margin: 0;
+}
+.tech {
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
+    height: 25px;
+}
+.contact-div {
+    margin-top: auto;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10vh;
+}
+#projetoContainer {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+@media (max-width: 768px) {
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+    aside {
+        width: 100%;
+        background: transparent;
+        height: auto;
+    }
+    .contact-div {
+        display: none;
+    }
+    main {
+        overflow-y: visible;
+    }
+    .projeto-card {
+        width: auto;
+    }
+}
+@media (min-width: 768px) {
+    .projeto-card {
+        width: auto;
+    }
+}
+@media (min-width: 1024px) {
+    .projeto-card {
+        width: 48%;
+    }
+}
+@media (min-width: 1200px) {
+    .projeto-card {
+        width: 32%;
+    }
+}

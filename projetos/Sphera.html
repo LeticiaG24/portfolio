@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sphera</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/projectDetail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <main id="visao-geral"></main>
+    <div class="colunas">
+        <div class="sobre">
+            <video src="https://private-user-images.githubusercontent.com/200285449/519505601-dea5e590-7549-4d64-84d1-234cce99ff0e.mp4?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NjYxNjk1MTMsIm5iZiI6MTc2NjE2OTIxMywicGF0aCI6Ii8yMDAyODU0NDkvNTE5NTA1NjAxLWRlYTVlNTkwLTc1NDktNGQ2NC04NGQxLTIzNGNjZTk5ZmYwZS5tcDQ_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUxMjE5JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MTIxOVQxODMzMzNaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT05ODMzMWM1NTEwZDVhNTcyOWI0ZGZmZDUyOGFmM2Y2NzJiZGMwNWEyNDlkZjcxYmEzNWEwYzkwYTNkMTdlYmEyJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.GXqlA7vLs7F-82yfFBpfu6ShXnovbGudAUIQflmOJn4" controls></video>
+            <section id="overview">
+                <h2>Project Overview & Goal</h2>
+                <p>Sphera é um sistema de PDI (Plano de Desenvolvimento Individual) desenvolvido para apoiar empresas na gestão e acompanhamento do crescimento profissional de seus colaboradores. O projeto foi solicitado pela FATEC e desenvolvido como um projeto acadêmico com cliente real, tendo a empresa Youtan como parceira. <br>A aplicação tem como objetivo permitir o registro, acompanhamento e análise de PDIs, oferecendo relatórios e indicadores estratégicos para gestores e equipes de RH. Dessa forma, o sistema contribui para o alinhamento entre objetivos individuais e organizacionais, auxiliando na tomada de decisões e promovendo a valorização do desenvolvimento contínuo dos profissionais.</p>
+            </section>
+            <section id="architecture">
+                <h2>The Fullstack Architecture</h2>
+                <h3>Front-end</h3>
+                <ul>
+                    <li>Desenvolvido com JavaFX para construção da interface gráfica</li>
+                    <li>Estilização das telas utilizando CSS</li>
+                    <li>Prototipagem das telas no Figma</li>
+                </ul>
+                <h3>Back-end</h3>
+                <ul>
+                    <li>Desenvolvido em Java</li>
+                    <li>Estruturação do projeto utilizando Maven</li>
+                    <li>Geração de relatórios em PDF utilizando a biblioteca iText</li>
+                    <li>Geração de relatórios em Excel utilizando a biblioteca Apache POI</li>
+                </ul>
+                <h3>Banco de dados</h3>
+                <ul>
+                    <li>Criação do banco de dados utilizando MySQL</li>
+                </ul>
+            </section>
+            <section id="role">
+                <h2>My Role & Core Contributions</h2>
+                <ul>
+                    <li>Implementação da geração de relatórios de metas em PDF, utilizando a biblioteca iText</li>
+                    <li>Criação de uma classe Controller para realizar a conexão entre a tabela de metas do JavaFX e o banco de dados MySQL</li>
+                    <li>Participação ativa em sprints, reuniões diárias (dailies) e revisões, seguindo a metodologia Scrum</li>
+                </ul>
+            </section>
+            <section id="challenges">
+                <h2>Challenges & Learnings</h2>
+                <p>Um dos principais desafios do projeto foi o aprendizado e aplicação do padrão MVC, exigindo compreensão clara da separação de responsabilidades entre Model, View e Controller, especialmente no contexto do JavaFX. 
+                    <br>Além disso, o trabalho com um cliente real trouxe desafios relacionados à comunicação, alinhamento de expectativas e adaptação a mudanças de requisitos ao longo das sprints. 
+                    <br>O projeto Sphera consolidou minha evolução técnica e profissional, aproximando o ambiente acadêmico das demandas reais do mercado.
+                </p>
+            </section>
+        </div>
+        <aside>
+            <div class="linha"></div>
+            <nav>
+                <h3>Index</h3>
+                <a href="#overview">Project Overview & Goal</a>
+                <a href="#architecture">The Fullstack Architecture</a>
+                <a href="#role">My Role & Core Contributions</a>
+                <a href="#challenges">Challenges & Learnings</a>
+            </nav>
+        </aside>
+    </div>
+    <section id="contactmeSection"></section>
+    <footer id="footer"></footer>
+    <script src="/js/Footer.js"></script>
+    <script src="/js/Tecnologia.js"></script>
+    <script src="/js/Contato.js"></script>
+    <script src="/js/NavAnimation.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const footerManager = new FooterManager();
+            const techManager = new TechManager();
+            techManager.renderDetalhesProjeto("Sphera");
+        });
+    </script>
+</body>
+</html>

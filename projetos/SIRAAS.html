@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIRAAS</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/projectDetail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <main id="visao-geral"></main>
+    <div class="colunas">
+        <div class="sobre">
+        <video src="https://github.com/user-attachments/assets/60da744f-809a-46ff-aca8-73a80b7fbd55
+" controls></video>
+        <section id="overview">
+            <h2>Project Overview & Goal</h2>
+            <p>Sistema web desenvolvido no 1º semestre do curso de Análise e Desenvolvimento de Sistemas, como projeto avaliativo da disciplina. O objetivo principal do projeto foi criar uma plataforma centralizada para o gerenciamento de atestados médicos e o acompanhamento de equipes Scrum em um ambiente acadêmico. O projeto teve como foco tanto a aprendizagem técnica quanto a vivência prática da metodologia Scrum.</p>
+        </section>
+        <section id="architecture">
+            <h2>The Fullstack Architecture</h2>
+        <ul>
+            <li>Front-end desenvolvido utilizando HTML5 e CSS3</li>
+            <li>Back-end implementado em Python, utilizando o microframework Flask</li>
+            <li>Persistência de dados realizada por meio de arquivos de texto (.txt)</li>
+            <li>Modelagem dos casos de uso realizada com a ferramenta Astah</li>
+        </ul>
+        </section>
+        <section id="role">
+            <h2>My Role & Core Contributions</h2>
+        <ul>
+            <li>Desenvolvimento do HTML e CSS da página do docente</li>
+            <li>Criação do HTML e CSS da página de estatísticas de afastamento</li>
+            <li>Estruturação do HTML da página de cadastro dos membros Scrum</li>
+            <li>Implementação do back-end do cadastro, utilizando Flask para receber os dados dos formulários e armazená-los em arquivos .txt</li>
+            <li>Modelagem dos casos de uso no Astah, colaborando para a documentação e entendimento funcional do sistema</li>
+        </ul>
+        </section>
+        <section id="challenges">
+            <h2>Challenges & Learnings</h2>
+        <p>Este projeto representou minha primeira experiência com programação. Iniciei a faculdade sem conhecimento prévio na área, o que tornou o desenvolvimento do SIRAAS um grande desafio técnico e conceitual.</p>
+        <br>
+        <p>Os principais desafios enfrentados foram:</p>
+        <ul>
+            <li>Compreender a lógica de programação e o funcionamento do back-end</li>
+            <li>Trabalhar em equipe seguindo a metodologia Scrum</li>
+            <li>Entender conceitos de modelagem e organização de requisitos</li>
+        </ul>
+        <p>Como aprendizado, o projeto foi fundamental para:</p>
+        <ul>
+            <li>Consolidar os primeiros conceitos de desenvolvimento web</li>
+            <li>Desenvolver autonomia para estudar e resolver problemas técnicos</li>
+        </ul>
+        </section>
+    </div>
+    <aside>
+        <div class="linha"></div>
+        <nav>
+            <h3>Index</h3>
+            <a href="#overview">Project Overview & Goal</a>
+            <a href="#architecture">The Fullstack Architecture</a>
+            <a href="#role">My Role & Core Contributions</a>
+            <a href="#challenges">Challenges & Learnings</a>
+        </nav>
+    </aside>
+    </div>
+    <section id="contactmeSection"></section>
+    <footer id="footer"></footer>
+    <script src="/js/Footer.js"></script>
+    <script src="/js/Tecnologia.js"></script>
+    <script src="/js/Contato.js"></script>
+    <script src="/js/NavAnimation.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const footerManager = new FooterManager();
+            const techManager = new TechManager();
+            techManager.renderDetalhesProjeto("SIRAAS");
+        });
+    </script>
+</body>
+</html>

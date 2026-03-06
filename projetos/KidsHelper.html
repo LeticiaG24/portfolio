@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mothers3</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/projectDetail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        .github-btn {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <main id="visao-geral"></main>
+    <div class="colunas">
+        <div class="sobre">
+            <img src="/img/kids-figma.png" alt="figma" style="width: 100%;">
+            <section id="overview">
+                <h2>Project Overview & Goal</h2>
+                <p>Kids Helper é o protótipo de um aplicativo mobile criado com o objetivo de incentivar crianças a realizarem tarefas do dia a dia, como arrumar a cama ou fazer a lição de casa, de forma lúdica e motivadora. O aplicativo também permite que os pais acompanhem o progresso das tarefas, fortalecendo a organização familiar e a responsabilidade das crianças.
+                <br>O projeto foi pensado para unir gamificação e controle parental, utilizando uma abordagem visual amigável e acessível, com uma temática de gatinhos para tornar a experiência mais atrativa e divertida para o público infantil.
+                <br>Funcionalidades definidas no projeto:
+                </p>
+                <ul>
+                    <li>Sistema de ofensivas para estimular constância</li>
+                    <li>Cronograma geral de tarefas</li>
+                    <li>Campo para os pais adicionarem recompensas reais</li>
+                    <li>Possibilidade de os pais gerenciarem mais de um filho no aplicativo</li>
+                </ul>
+            </section>
+            <section id="architecture">
+                <h2>The Fullstack Architecture</h2>
+                <ul>
+                    <li>Criação completa do protótipo no Figma</li>
+                    <li>Aplicação da metodologia Design Thinking</li>
+                    <li>Realização de brainstorming para levantamento de ideias</li>
+                </ul>
+            </section>
+            <section id="role">
+                <h2>My Role & Core Contributions</h2>
+                <p>Participei ativamente da ideação, concepção e prototipagem do aplicativo. Minhas principais contribuições foram:</p>
+                <ul>
+                    <li>Participação no brainstorming e na seleção das ideias finais</li>
+                    <li>Contribuição para a definição das funcionalidades principais do app</li>
+                    <li>Criação e organização do protótipo no Figma</li>
+                </ul>
+            </section>
+            <section id="challenges">
+                <h2>Challenges & Learnings</h2>
+                <p>O principal desafio do projeto foi pensar a experiência do usuário infantil, equilibrando diversão, simplicidade e incentivo positivo, sem comprometer o controle e a clareza para os pais.
+                <br>Além disso, trabalhar com Design Thinking exigiu abertura para testar ideias, descartar soluções iniciais e refinar conceitos com base no valor entregue ao usuário.
+                <br>Como aprendizados, o projeto proporcionou:
+                </p>
+                <ul>
+                    <li>Aplicação prática da metodologia Design Thinking</li>
+                    <li>Experiência com prototipagem no Figma</li>
+                    <li>Desenvolvimento de soluções com foco em UX/UI</li>
+                    <li>Criação de produtos digitais voltados para públicos específicos</li>
+                </ul>
+            </section>
+        </div>
+        <aside>
+            <div class="linha"></div>
+            <nav>
+                <h3>Index</h3>
+                <a href="#overview">Project Overview & Goal</a>
+                <a href="#architecture">The Fullstack Architecture</a>
+                <a href="#role">My Role & Core Contributions</a>
+                <a href="#challenges">Challenges & Learnings</a>
+            </nav>
+        </aside>
+    </div>
+    <section id="contactmeSection"></section>
+    <footer id="footer"></footer>
+    <script src="/js/Footer.js"></script>
+    <script src="/js/Tecnologia.js"></script>
+    <script src="/js/Contato.js"></script>
+    <script src="/js/NavAnimation.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const footerManager = new FooterManager();
+            const techManager = new TechManager();
+            techManager.renderDetalhesProjeto("KidsHelper");
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/home.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inder&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Imbue:opsz,wght@10..100,100..900&family=Inder&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Letícia Furtado</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/index.html#home"><button>Home</button></a>
+            <a href="/index.html#about"><button>About me</button></a>
+            <a href="/index.html#projects"><button>Projects</button></a>
+            <a href="/index.html#skills"><button>Skills</button></a>
+            <a href="/index.html#certificate"><button>Certificates</button></a>
+            <a href="/index.html#contactmeSection"><button>Contact me</button></a>
+        </nav>
+    </header>
+    <main id="home">
+        <div class="hands">
+            <img src="/img/right-hand.png" alt="hand" class="right-hand">
+            <img src="/img/left-hand.png" alt="hand" class="left-hand">
+        </div>
+        <div class="introducao">
+            <h2>Full Stack Developer</h2>
+            <h1>Letícia Furtado</h1>
+            <p>Full Stack Developer, unindo habilidades de front-end e back-end para criar soluções completas e eficientes. Resolvendo problemas de lógica, estruturando sistemas e buscando caminhos criativos para superar desafios técnicos.</p>
+            <button class="email" value="leticia24062006@gmail.com" id="copiarEmail" onclick="copiar()">
+                <i class="fa-regular fa-clone"></i> leticia.furtado2406@gmail.com
+            </button>
+        </div>
+    </main>
+    <section class="about" id="about">
+        <div class="aboutme">
+            <h3>About me</h3>
+            <p>Sou estudante de Análise e Desenvolvimento de Sistemas na FATEC, com grande interesse em resolver problemas de lógica e encontrar soluções criativas para desafios tecnológicos. Tenho facilidade em organização, trabalho em equipe e planejamento, o que me ajuda a atuar de forma estruturada e colaborativa em projetos.</p>
+        </div>
+        <div class="soft">
+            <h3>Methodologies</h3>
+            <ul>
+                <li>Scrum</li>
+                <li>Design Thinking</li>
+            </ul>
+            <h3>Soft skills</h3>
+            <ul>
+                <li>Trabalho em equipe</li>
+                <li>Aprendizado ativo</li>
+                <li>Gestão de tempo</li>
+                <li>Criatividade</li>
+                <li>Adaptabilidade</li>
+                <li>Organização</li>
+            </ul>
+        </div>
+        <div class="myprojects">
+            <h3>See my projects</h3>
+            <a href="/projectsList.html"><i class="fa-solid fa-link"></i> Projects</a>
+        </div>
+        <div class="resume">
+            <h3>Get my resume</h3>
+            <a href="https://docs.google.com/document/d/1vb_PG04XEZMlavPRN9NbL_PE-BtqPaHL/edit?usp=sharing&ouid=110959205967745590410&rtpof=true&sd=true"><i class="fa-regular fa-file-lines"></i> Document</a>
+        </div>
+    </section>
+    <section id="projects">
+        <h1>Projects</h1>
+        <hr>
+        <h2>Featured projects that highlight my skills.</h2>
+        <div id="mainProjetoContainer">
+            
+        </div>
+        <a href="/projectsList.html"><i class="fa-solid fa-link"></i> See all projects</a>
+    </section>
+    <section id="skills">
+        <h1>Hard skills</h1>
+        <hr>
+        <h2>The technical foundation supporting my work.</h2>
+        <div class="tec-container" id="tecnologiaContainer">
+
+        </div>
+    </section>
+    <section id="certificate">
+        <h1>Certificates</h1>
+        <hr>
+        <h2>My commitment to lifelong learning.</h2>
+        <div class="certificado-container" id="certificadoContainer">
+            
+        </div>
+    </section>
+    <section id="contactmeSection"></section>
+    <footer id="footer"></footer>
+    <script src="/js/Certificado.js"></script>
+    <script src="/js/Tecnologia.js"></script>
+    <script src="/js/Contato.js"></script>
+    <script src="/js/Animacao.js"></script>
+    <script src="/js/Footer.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const footerManager = new FooterManager();
+            const certificateManager = new CertificateManager();
+            const techManager = new TechManager();
+        });
+    </script>
+</body>
+</html>
